@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<!--  Remove the comments before uploading to your site to streamline the code and decrease page load time.  -->
+<head>
+        <!-- Include a keyword rich title at the top of your head tag. -->
+    <title>Mobile Template</title>
+    <meta name="keywords" content="keyword1, keyword2, keyword3" />
+    <meta name="description" content="This is a basic mobile web page template with audio and video."/>
+    <meta charset="UTF-8" />
+    
+    <!-- Zoom in to the text -->
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <!-- Indentify your website as optimized for mobile -->
+    <meta name="HandheldFriendly" content="true"/> 
+    <!-- Specify screen resolution for Windows devices -->
+    <meta name="MobileOptimized" content="320"/> 
+    
+    <!-- Include a 57x57 pixel PNG image for an iOS home screen icon. Use a full URL for the file path and this will work for Android too.  -->
+    <link rel="apple-touch-icon-precomposed" href="http://yoursite.com/imgs/apple-touch-icon.png"/>
+    <!-- Add a bookmark favicon -->
+    <link rel="shortcut icon" href="http://yoursite.com/favicon.ico" />
+    
+    <style type="text/css">
+    * {
+    /* This stops iOS from changing the size of the text when you flip the phone. */
+    -webkit-text-size-adjust:none;
+    }
+    </style>
+</head>
+
+<body>
+        <div id="Header">
+        <!-- Always include alt text for images that display text or a logo.  Include height and width on images to stop content from shifting after an image loads. -->
+                <img src="/imgs/logo.png" alt="Company Name" height="60" width="200" />
+        </div>
+
+        <div id="Content">
+                <h1>A Basic Template for a Mobile Web Page</h1>
+                <p>The simplest web page that works on Android, iPhone, and Blackberry phones, across popular browsers. Supports screen rotation, portrait and landscape.</p>
+    
+
+                <h2>Audio</h2>
+                <p>How to play audio in MP3 or Ogg format:</p>
+        
+        <!-- Play the audio in the browser's native HTML5 video player -->
+                <audio controls>
+                        <source src="http://www.w3schools.com/html5/song.ogg" type="audio/ogg" >
+                        <source src="http://www.w3schools.com/html5/song.mp3" type="audio/mp3" >
+            <!-- Offer the audio file as a download for browsers that don't render HTML5 -->
+                        <p>Download audio as <a href="http://www.w3schools.com/html5/song.ogg">OGG</a> or <a href="http://www.w3schools.com/html5/song.mp3">MP3</a>.</p> 
+                </audio>
+
+    
+
+                <h2>Video</h2>
+                <p>How to play a video in MP3 or Ogg format:</p>
+        
+        <!-- Play the video in the browser's native HTML5 video player -->
+        <video id="movie" width="320" height="240" controls>   
+                <source src="http://www.w3schools.com/html5/movie.webm" type="video/webm" />
+                <source src="http://www.w3schools.com/html5/movie.ogg" type='video/ogg; codecs="theora,vorbis"' />
+                                <source src="http://www.w3schools.com/html5/movie.mp4" type="video/mp4" />
+                <!-- Allow Flash to play the video if no HTML5 video support -->
+                <object width="320" height="240" type="application/x-shockwave-flash" data="http://fpdownload.adobe.com/strobe/FlashMediaPlayback.swf">  
+                    <param name="movie" value="http://fpdownload.adobe.com/strobe/FlashMediaPlayback.swf" />
+                    <param name="allowfullscreen" value="true" />  
+                    <param name="flashvars" value='http://www.w3schools.com/html5/movie.mp4' /> 
+                    <!-- Offer a download link if no HTML5 or Flash is supported -->
+                    <p>Download video as <a href="http://www.w3schools.com/html5/movie.mp4">MP4</a>, <a href="http://www.w3schools.com/html5/movie.webm">WebM</a>, or <a href="http://www.w3schools.com/html5/movie.ogv">Ogg</a>.</p>  
+                </object> 
+        </video>
+                        <!-- android needs this hack -->
+                        <script>
+                          var v = document.getElementById("movie");
+                          v.onclick = function() {
+                                if (v.paused) {
+                                  v.play();
+                                } else {
+                                  v.pause();
+                                }
+                          });
+                        </script>
+        </div>
+    
+    <!-- Placing nav at the bottom reduces scrolling to view content after page load -->
+        <div id="Nav">
+                <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                </ul>
+        </div>
+
+        <div id="Footer">
+                <p>© Year Company Name</p>
+        </div>
+    
+        </body>
+</html>
